@@ -135,3 +135,30 @@ h6{
   left: 0;
   border-radius: 10px;
 }
+#sec_1 {
+	background-color: #000;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+}
+.txt-name {
+	font-family: "Montserrat";
+	font-weight: 700;
+}
+#dnd-svg {
+    width: auto;
+    overflow: visible;
+}
+.txt-name {
+	font-family: "Montserrat";
+	font-weight: 700;
+	fill: #625757;
+}
+@media screen and (max-width:440px){
+	#dnd-svg {
+		width: 210px;
+	}
+}
