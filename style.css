@@ -1,15 +1,54 @@
+@font-face {
+    font-family: 'Sansation';
+    src: url('./fonts/SansationBold.woff2') format('woff2'),
+        url('./fonts/SansationBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansation';
+    src: url('./fonts/SansationLight.woff2') format('woff2'),
+        url('./fonts/SansationLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansation';
+    src: url('./fonts/SansationRegular.woff2') format('woff2'),
+        url('./fonts/SansationRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+--color-heading: #625757;
+--color-text: #625757;
+--color-bg: #171717;
+--color-link: #ff0000;
+  /* background-color: var(--color-bg); */
+}
 html, body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+.m-container{
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 .clear{
-    clear: both;
+  clear: both;
 }
-.dndnainer{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1195px;
+ul {
+	padding: 0;
+	margin: 0;
+}
+p, a, span{
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text);
 }
 h1,
 h2,
@@ -17,10 +56,82 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Notable', sans-serif;
+  font-family: 'Sansation';
 }
-p,
-a, 
-span{
-    font-family: 'Montserrat', sans-serif;
+#my-nav {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+}
+#my-nav ul {
+	list-style: none;
+}
+#my-nav ul li {
+  display: inline-block;
+  transition: .5s ease-out;
+}
+#my-nav ul li .nav-link {
+	position: relative;
+	font-size: 30px;
+	transition: .5s ease-out;
+	overflow: hidden;
+	border-radius: 50px;
+	z-index: 1;
+	width: 53px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	margin: 0px 5px;
+}
+#my-nav ul li:hover .nav-link {
+	color: #fff;
+}
+#my-nav ul li .hover-icons {
+  transition: .5s ease-out;
+  position: absolute;
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+}
+#my-nav ul li .hover-icons a {
+	overflow: visible;
+	text-align: center;
+	font-size: 16px;
+	width: 100%;
+}
+#my-nav ul li .nav-link::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+#my-nav ul li .nav-link::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #625757;
+	height: 100%;
+	width: 0%;
+  z-index: -1;
+  transition: 1s ease-out;
+}
+#my-nav ul li:hover .nav-link::after{
+	width: 100%;
+}
+#my-nav ul li:hover .hover-icons{
+  visibility: visible;
+  opacity: 1;
+  background-color: #000;
+  width: 100%;
+  left: 0;
+  border-radius: 10px;
 }
