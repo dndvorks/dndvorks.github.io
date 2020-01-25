@@ -61,10 +61,7 @@ h6{
 #my-nav {
 	position: absolute;
 	top: 3%;
-	right: 0;
-	left: 0;
-	margin: 0 auto;
-	text-align: center;
+	right: 3%;
 }
 #my-nav ul {
 	list-style: none;
