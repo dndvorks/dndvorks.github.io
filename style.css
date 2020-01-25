@@ -89,11 +89,15 @@ h6{
 	color: #fff;
 }
 #my-nav ul li .hover-icons {
-  transition: .5s ease-out;
-  position: absolute;
-  opacity: 0;
-  display: block;
-  visibility: hidden;
+	transition: .5s ease-out;
+	position: absolute;
+	opacity: 0;
+	display: block;
+	visibility: hidden;
+	text-align: center;
+	padding: 15px 0;
+	border: 1px solid #625656;
+	margin-top: 10px;
 }
 #my-nav ul li .hover-icons a {
 	overflow: visible;
