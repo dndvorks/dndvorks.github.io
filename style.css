@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6{
-  font-family: 'Sansation';
+  font-family: 'Montserrat';
 }
 #my-nav {
 	position: absolute;
@@ -174,7 +174,7 @@ h6{
 	transform: translate(-8%, -10%);
 	stroke-width: 5px;
 }
-h1 {
+#sec_2 h1 {
     font-size: 65px;
     color: #fff;
     font-family: 'Montserrat';
