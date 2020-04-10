@@ -50,6 +50,7 @@ ul {
 }
 ul li {
 	color: #625656;
+	font-family: 'Montserrat';
 }
 p, a, span{
   font-family: 'Montserrat', sans-serif;
