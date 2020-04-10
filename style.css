@@ -141,13 +141,15 @@ h6{
   border-radius: 10px;
 }
 #sec_1 {
-	background-color: #000;
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	text-align: center;
+}
+.cont{
+	background-color: #000;
 }
 .txt-name {
 	font-family: "Montserrat";
