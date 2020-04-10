@@ -48,6 +48,9 @@ ul {
 	padding: 0;
 	margin: 0;
 }
+ul li {
+	color: #625656;
+}
 p, a, span{
   font-family: 'Montserrat', sans-serif;
   color: var(--color-text);
@@ -60,7 +63,7 @@ h5,
 h6{
   font-family: 'Montserrat';
   margin: 0;
-  color: #fff;
+  color: #625656;
 }
 #my-nav {
 	position: absolute;
