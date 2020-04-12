@@ -19,7 +19,7 @@ var tl = gsap.timeline();
 	tl.to("#upper", { duration: 1, opacity: 0, ease:"none" }, "+=2");
 var scene = new ScrollMagic.Scene({
 							triggerElement: "#sec_1"
-					        triggerHook: "onEnter",
+					        triggerHook: "onEnter"
 						})
 						.setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
 						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
