@@ -13,8 +13,8 @@ const itemsUp = [".light1", ".light2", ".light3",".light9", ".light10", ".light1
 const controller = new ScrollMagic.Controller();
 
 var tl = gsap.timeline();
-	tl.from("#sec_1 h1", { duration: 0.75, y: 30 }, "text");
-	tl.to("#sec_1 h1", { duration: 1, opacity: 0, ease:"none" }, "+=2");
+	tl.from("#sec_2 h1", { duration: 0.75, y: 30 , height:"100%"}, "text");
+	tl.to("#sec_2 h1", { duration: 1, opacity: 0, ease:"none" }, "+=2");
 var scene = new ScrollMagic.Scene({
 							triggerElement: "#sec_1",
 					        triggerHook: "onEnter"
