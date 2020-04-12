@@ -155,8 +155,10 @@ h6{
 	width: 100%;
 	text-align: center;
 }
-.cont{
-	background-color: #000;
+.cont {
+	background-color: transparent;
+	position: relative;
+	z-index: 1;
 }
 .txt-name {
 	font-family: "Montserrat";
@@ -202,7 +204,8 @@ h6{
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
-	background: transparent;
+	background: #000;
+	z-index: -1;
 }
 #lines{
   position: absolute;
