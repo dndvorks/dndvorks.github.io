@@ -195,14 +195,14 @@ h6{
     text-shadow: 3px 2px #4e984e;
     font-weight: 600;
 }
-.container{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  background: #222222
+.container {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	background: transparent;
 }
 #lines{
   position: absolute;
@@ -222,9 +222,10 @@ h6{
 }
 
 .light {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-  fill: #7A6BB5; }
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #1d791d;
+}
 
 @keyframes strokE{ 
 	0%{
