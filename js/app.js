@@ -13,12 +13,12 @@ const itemsUp = [".light1", ".light2", ".light3",".light9", ".light10", ".light1
 const controller = new ScrollMagic.Controller();
 
 var tl = gsap.timeline();
-	tl.from("#upper", { duration: 0.75, y: 30 }, "text");
-	tl.to("#upper", { duration: 1, opacity: 0, ease:"none" }, "+=2");
+	tl.from("#sec_1 h1", { duration: 0.75, y: 30 }, "text");
+	tl.to("#sec_1 h1", { duration: 1, opacity: 0, ease:"none" }, "+=2");
 var scene = new ScrollMagic.Scene({
 							triggerElement: "#sec_1",
 					        triggerHook: "onEnter"
 						})
-						.setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+						.setTween(tl) // trigger a TweenMax.to tween
 						.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 						.addTo(controller);
