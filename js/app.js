@@ -10,15 +10,13 @@ const itemsDown = [".light4", ".light5", ".light6", ".light7", ".light8", ".ligh
 const itemsUp = [".light1", ".light2", ".light3",".light9", ".light10", ".light17"]
 .forEach(e => animateWithRandomNumber(e, 1080, -1080))
 
-
-
 const controller = new ScrollMagic.Controller();
 
 var tl = gsap.timeline();
 	tl.from("#upper", { duration: 0.75, y: 30 }, "text");
 	tl.to("#upper", { duration: 1, opacity: 0, ease:"none" }, "+=2");
 var scene = new ScrollMagic.Scene({
-							triggerElement: "#sec_1"
+							triggerElement: "#sec_1",
 					        triggerHook: "onEnter"
 						})
 						.setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
