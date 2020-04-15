@@ -66,10 +66,19 @@ h6{
   margin: 0;
   color: #625656;
 }
+.left{
+	width: 50%;
+	float: left;
+}
+.right{
+	width: 50%;
+	float: right;
+}
 #my-nav {
 	position: absolute;
 	top: 3%;
 	right: 3%;
+	z-index: 10;
 }
 #my-nav ul {
 	list-style: none;
@@ -106,12 +115,14 @@ h6{
 	padding: 15px 0;
 	border: 1px solid #625656;
 	margin-top: 10px;
+	display: none;
 }
 #my-nav ul li .hover-icons a {
 	overflow: visible;
 	text-align: center;
 	font-size: 16px;
 	width: 100%;
+	display: none;
 }
 #my-nav ul li .nav-link::before {
 	position: absolute;
@@ -134,7 +145,7 @@ h6{
 	height: 100%;
 	width: 0%;
   z-index: -1;
-  transition: 1s ease-out;
+  transition: 0.3s ease-out;
 }
 #my-nav ul li:hover .nav-link::after{
 	width: 100%;
@@ -154,6 +165,19 @@ h6{
 	justify-content: center;
 	width: 100%;
 	text-align: center;
+}
+#sec_1 .btn-scroll {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 10%;
+}
+.btn-scroll a {
+	outline: none;
+	text-decoration: navajowhite;
+	letter-spacing: 2px;
+	font-size: 12px;
+	font-weight: 600;
 }
 .cont {
 	background-color: transparent;
@@ -185,17 +209,51 @@ h6{
 	transform: translate(-8%, -10%);
 	stroke-width: 5px;
 }
+#sec_2 {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.img-mebox {
+	position: relative;
+	width: 65%;
+	left: 80px;
+	display: block;
+}
+.img-mebox::before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 20px;
+	border: 6px solid #4e984e;
+	display: block;
+	z-index: -1;
+	width: 100%;
+	height: 97%;
+	border-radius: 5px;
+}
+.img-mebox img {
+	width: 100%;
+	border-radius: 3px;
+}
 #sec_2 h1 {
-    font-size: 65px;
-    color: #fff;
-    font-family: 'Montserrat';
-    width: 95%;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 80px;
-    color: #625656;
-    text-shadow: 3px 2px #4e984e;
-    font-weight: 600;
+	font-size: 35px;
+	/* color: #fff; */
+	font-family: 'Montserrat';
+	width: 95%;
+	margin: 0 auto;
+	text-align: left;
+	line-height: 49px;
+	color: #625656;
+	text-shadow: 2px 1px #4e984e;
+	font-weight: 600;
+}
+#sec_2 h1 span {
+	display: block;
+	font-size: 65px;
+	line-height: 75px;
+	padding-bottom: 40px;
 }
 .container {
 	position: fixed;
