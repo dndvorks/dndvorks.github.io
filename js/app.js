@@ -178,9 +178,9 @@ var bnr = anime.timeline({loop: true, autoplay:false});
   
   var animeBGline = anime({
     targets:".sub #bg-line rect",
-    strokeDashoffset:[4000,0],
+    strokeDashoffset:[8000,0],
     easing: "easeOutQuad",
-    duration: 2000,
+    duration: 8000,
     loop:false,
     autoplay:false
   });
@@ -394,6 +394,20 @@ var tEch = anime.timeline({loop: false,autoplay:false})
       }, false)
     })
   }
+$(".my-works li a").each(function(){
+  var imgsrc =  $(this).attr("data-src");
+  $( this).mouseenter(function() {
+    $(".works-image").css( "background-image",'url('+imgsrc+')' );
+    setTimeout(function(){ $('.works-image').fadeIn(1000); }, 100);
+  });
+});
+$(".my-works li a").each(function(){
+  var imgsrc =  $(this).attr("data-src");
+  $( this).mouseleave(function() {
+    $(".works-image").css( "background-image",'url()' );
+    $('.works-image').fadeOut(500);
+  });
+});
   
   function lerp(a, b, n) {
     return (1 - n) * a + n * b
