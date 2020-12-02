@@ -417,18 +417,18 @@ a, span, label, strong, input, div, button{
 }
 .works-image {
 	position: fixed;
-	width: 500px;
-	height: 300px;
+	width: 60%;
+	height: 100vh;
 	background-color: transparent;
-	top: 50%;
-	left: 80%;
-	background-position: top center;
+	top: 0;
+	right: 0;
+	background-position: top left;
 	background-size: cover;
 	background-repeat: no-repeat;
-	transform: translate(-50%,-50%);
 	opacity: 0.5;
 	display: none;
 	border-radius: 10px;
+	z-index: -1;
 }
 * {
 	outline: none !important;
