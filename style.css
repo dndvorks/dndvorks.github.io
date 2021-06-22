@@ -74,14 +74,15 @@ h6{
 	display: inline-block;
 	color: #fff;
 	position: absolute;
-	font-size: 35px;
+	font-size: 21px;
 	left: 0;
 	right: 0;
 	font-weight: 300;
 	letter-spacing: 5px;
 	text-align: center;
 	margin: 0;
-	margin-top: 30px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .preload-txt .txt-1 {
 	-webkit-text-stroke: 2px #20730f;
@@ -434,3 +435,85 @@ a, span, label, strong, input, div, button{
 	outline: none !important;
 	text-decoration: none !important;
 }
+@media screen and (max-width:1500px){
+
+}
+@media screen and (max-width:1366px){
+	
+}
+@media screen and (max-width:1280){
+	
+}
+@media screen and (max-width:1024px){
+	
+}
+@media screen and (max-width:991px){
+	.letter {
+		font-size: 90px;
+		line-height: 90px;
+	}
+	.l .letters {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.dnav {
+		margin: 80px auto 0;
+	}
+}
+@media screen and (max-width:767px){
+	
+}
+@media screen and (max-width:640px){
+	.letter {
+		font-size: 70px;
+		line-height: 70px;
+	}
+	.l .letters {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.dnav ul li {
+		padding: 10px 10px;
+	}
+	.dnav ul li a {
+		font-size: 14px;
+	}
+
+}
+@media screen and (max-width:480px){
+	.preload-txt {
+		height: 80px;
+		width: auto;
+	}	
+	.dnav ul {
+		flex-direction: column;
+	}
+	.dnav ul li {
+		margin: 5px 10px;
+	}
+}
+@media screen and (max-width:390px){
+	.preload-txt .txt {
+		font-size: 16px;
+	}	
+	.preload-txt {
+		height: 60px;
+		width: 90%;
+	}
+	.l .letters {
+		font-size: 10px;
+		line-height: 16px;
+	}
+	.letter {
+		font-size: 55px;
+		line-height: 60px;
+	}
+	.dnav {
+		margin: 70px auto 0;
+	}
+	
+	.dnav ul li a {
+		font-size: 12px;
+	}
+}
+
