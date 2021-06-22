@@ -1,233 +1,519 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my place!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
-</head>
-<body>
-    <canvas class="js-canvas"></canvas>
-    <div id="particles"></div>
-<div class="preload">
-    <div class="cont">
-        <div class="preload-txt">
-            <p class="txt txt-1">Software Developer.</p>
-            <p class="txt txt-2">Web Developer.</p>
-            <p class="txt txt-3">UI/UX Designer.</p>
-            <svg width="100%" height="100%">
-                <rect width="100%" height="100%" style="fill:#000;" />
-                Sorry, your browser does not support inline SVG.  
-            </svg>
-        </div>
-    </div>
-</div>
-<section id="banner" class="white">
-    <div class="cont">
-        <h1 class="letter">Dave<br>Borca</h1>
-        <div class="skills">
-            <p class="l l1">Software Developer</p>
-            <p class="l l2">Web Developer</p>
-            <p class="l l3">UI/UX Designer</p>
-            <div class="clear"></div>
-        </div>
-        <div class="dnav">
-            <ul>
-                <li  data-hover>
-                  <a href="#" data-src="#works">My works</a>
-                  <svg width="100%" height="100%">
-                    <rect width="100%" height="100%" style="fill:#000;" />
-                    Sorry, your browser does not support inline SVG.  
-                </svg> 
-                </li>
-                <li  data-hover> <a href="#" data-src="#about">About me</a>
-                    <svg width="100%" height="100%">
-                        <rect width="100%" height="100%" style="fill:#000;" />
-                        Sorry, your browser does not support inline SVG.  
-                    </svg>  </li>
-                <li  data-hover> <a href="#" data-src="#contact">Contact me!</a>
-                    <svg width="100%" height="100%">
-                        <rect width="100%" height="100%" style="fill:#000;" />
-                        Sorry, your browser does not support inline SVG.  
-                    </svg>  </li>
-            </ul>
-        </div>
-        <div class="clear"></div>
-    </div>
-</section>
-<div id="works" class="sub black">
-    <a data-hover class="close-btn" href="#">CLOSE
-        <svg height="100" width="100">
-            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-            Sorry, your browser does not support inline SVG.  
-          </svg>
-    </a>
-    <div class="cont">
-        <div class="cont">
-            <div class="stuff myBackground">
-                <div class="col col0">
-                    <h4>What I've Developed.</h4>
-                </div>
-                <div class="col col1">
-                    <ul class="my-works">  
-                        <li>
-                            <a href="http://agency.purplecow.website/" target="_blank" data-src="https://user-images.githubusercontent.com/50729531/94021080-3616f100-fde6-11ea-9fd7-817cefcd3e8e.png"><h5>Purple Cow Agency</h5></a>
-                            <div class="con-tools">
-                                <p>Tools: Wordpress, AnimeJS, ACF, HTML/CSS, PHP, Figma, JavaScript</p>
-                            </div>
-                        </li>   
-                        <li>
-                            <a href="https://bongbongspiaya.com.ph/" target="_blank" data-src="https://user-images.githubusercontent.com/50729531/94021037-2697a800-fde6-11ea-8703-e663eeb1e04e.png"><h5>BongBong's Piaya and Barquillos</h5></a>
-                            <div class="con-tools">
-                                <p>Tools: Wordpress, GSAP, ACF, HTML/CSS, WooCommerce, PHP, Photoshop, Figma, JavaScript</p>
-                            </div>
-                        </li> 
-                        <li>
-                            <a href="https://delishdeli.com/" target="_blank" data-src="https://user-images.githubusercontent.com/50729531/100879712-b9d81280-34e6-11eb-9c16-44d2c33fb125.png"><h5>Delish Deli</h5></a>
-                            <div class="con-tools">
-                                <p>Tools: Wordpress, GSAP, ACF, HTML/CSS, JavaScript, PHP</p>
-                            </div>
-                        </li> 
-                        <li>
-                            <a href="https://elegancenails.co/" target="_blank" data-src="https://user-images.githubusercontent.com/50729531/100879806-db38fe80-34e6-11eb-8943-2e7f07ea60d1.png"><h5>Elegance Nails</h5></a>
-                            <div class="con-tools">
-                                <p>Tools: Wordpress, GSAP, ACF, HTML/CSS, JavaScript, PHP</p>
-                            </div>
-                        </li>        
-                    </ul>
-                </div>
-                <div class="works-image"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <svg id="bg-line" width="100%" height="100%">
-        <rect width="100%" height="100%" style="fill:#000;" />
-        Sorry, your browser does not support inline SVG.  
-    </svg>
-</div>
-<div id="about" class="sub black">
-    <a  data-hover class="close-btn" href="#">CLOSE
-        <svg height="100" width="100">
-            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-            Sorry, your browser does not support inline SVG.  
-          </svg> 
-    </a>
-    <div class="cont">
-        <h2>Hi! I'm Dave,</h2>
-        <h3 class="abt-cont">a software and web developer, inpart is designing and integrating graphics currently sprinkling pixels at Purple Cow Agency.</h3>
-        <div class="stuff">
-            <div class="col col0">
-                <h4>Stuff I Use</h4>
-            </div>
-            <div class="col col1">
-                <h5>Technologies</h5>
-                <ul>            
-                    <li class="tech1">Object Pascal</li>  
-                   <li class="tech2">HTML/CSS/SASS</li>  
-                    <li class="tech3">JavaScript</li>  
-                    <li class="tech4">Vanilla JS</li> 
-                    <li class="tech5">PHP</li>  
-                    <li class="tech6">GreenSock</li>  
-                    <li class="tech7">Anime JS</li>
-                </ul>
-            </div>
-            <div class="col col2">
-                <h5>Tools</h5>
-                <ul>            
-                    <li class="tech1">Delphi Rad Studio</li>  
-                   <li class="tech2">Visual Studio Code</li>  
-                    <li class="tech3">Sublime Text</li>  
-                    <li class="tech4">MS Access</li> 
-                    <li class="tech5">MySQL</li>  
-                    <li class="tech6">MSSQLSERVER</li>  
-                    <li class="tech7">Photoshop</li>
-                    <li class="tech7">Figma</li>
-                    <li class="tech7">GIMP</li>
-                </ul>
-            </div>
-        </div>
-        <div class="stuff myBackground">
-            <div class="col col0">
-                <h4>My Background</h4>
-            </div>
-            <div class="col col1">
-                <h5>Experience</h5>
-                <ul>  
-                    <li>
-                        <h6>Web Developer</h6>
-                        <span class="year">June 29, 2020 - Present</span>
-                        <span class="company">Purple Cow Agency</span>
-                    </li>           
-                    <li>
-                        <h6>MIS Specialist - Marketing support</h6>
-                        <span class="year">October 16, 2019 - June 26, 2020</span>
-                        <span class="company">BongBong's Piaya and Barquillos</span>
-                    </li>  
-                    <li>
-                        <h6>Web Developer</h6>
-                        <span class="year">September 03, 2018 - October 10, 2019</span>
-                        <span class="company">Night Birds Solutions</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col col2">
-                <h5>Education</h5>
-                <ul>  
-                    <li>
-                        <h6>Bachelor of Science in Computer Science</h6>
-                        <span class="year">2014 - 2018</span>
-                        <span class="company">Silay Institute, Inc.</span>
-                    </li>           
-                </ul>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <svg id="bg-line" width="100%" height="100%">
-        <rect width="100%" height="100%" style="fill:#000;" />
-        Sorry, your browser does not support inline SVG.  
-    </svg>
-</div>
-<div id="contact" class="sub black">
-    <a  data-hover  class="close-btn" href="#">CLOSE
-        <svg height="100" width="100">
-            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-            Sorry, your browser does not support inline SVG.  
-          </svg> 
-    </a>
-    <div class="cont">
-        <div class="stuff myBackground">
-            <div class="col col0">
-                <h4>Just beep me up!</h4>
-            </div>
-            <div class="col col1">
-                <h5>I am just a click away!</h5>
-                <ul>  
-                    <li>
-                        <h6>Facebook: <a href="https://facebook.com/DaveBorca20/" target="_blank">Dave Borca</a></h6>
-                    </li>   
-                    <li>
-                        <h6>Email: <a href="mailto:dndvrks@gmail.com" target="_blank">dndvrks@gmail.com</a></h6>
-                    </li>    
-                    <li>
-                        <h6>Mobile: <a href="tel:+639771127727" target="_blank">+639771127727</a></h6>
-                    </li>      
-                </ul>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <svg id="bg-line" width="100%" height="100%">
-        <rect width="100%" height="100%" style="fill:#000;" />
-        Sorry, your browser does not support inline SVG.  
-    </svg>
-</div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/anime.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/app.js"></script>
-</body>
-</html>
+html, body {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+}
+html{
+	background-color: #fff;
+}
+.particles-js-canvas-el{
+	opacity: 0;
+  }
+.js-canvas{
+	display: none;
+}
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	z-index: 39999;
+	pointer-events: none;
+	mix-blend-mode: difference;
+	bottom: 0;
+	right: 0;
+}
+body{
+	background-color: rgb(0, 0, 0);
+}
+.cont {
+	position: relative;
+	width: 100%;
+	max-width: 90%;
+	margin: 0 auto;
+	z-index: 1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Krona One', sans-serif;
+    margin: 0;
+}
+.preload {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background-color: #202020;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.preload .cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.preload-txt {
+	height: 100px;
+	width: 500px;
+	overflow: hidden;
+	position: relative;
+}
+.preload-txt svg rect {
+	fill: transparent !important;
+	stroke: #fff;
+	stroke-width: 5px;
+	stroke-dasharray: 1200px;
+}
+.preload-txt .txt {
+	display: inline-block;
+	color: #fff;
+	position: absolute;
+	font-size: 21px;
+	left: 0;
+	right: 0;
+	font-weight: 300;
+	letter-spacing: 5px;
+	text-align: center;
+	margin: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.preload-txt .txt-1 {
+	-webkit-text-stroke: 2px #20730f;
+	-webkit-text-fill-color: transparent;
+	font-weight: 600 !important;
+}
+.preload-txt .txt-2{
+	-webkit-text-stroke: 2px #c13425;
+	-webkit-text-fill-color: transparent;
+	font-weight: 600 !important;
+}
+.preload-txt .txt-3{
+	-webkit-text-stroke: 2px #c67824;
+	-webkit-text-fill-color: transparent;
+	font-weight: 600 !important;
+}
+.txt1 {
+	display: inline-block;
+	opacity: 0;
+}
+.clear{
+    clear: both;
+}
+a, span, label, strong, input, div, button{
+    font-family: 'Montserrat', sans-serif;
+}
+.l .letters {
+	display: inline-block;
+	-webkit-text-stroke: 1px #20730f;
+	-webkit-text-fill-color: transparent;
+	font-size: 23px;
+	line-height: 33px;
+}
+.skills .l2 .letters {
+	-webkit-text-stroke: 1px #c13425;
+}
+.skills .l3 .letters {
+	-webkit-text-stroke: 1px #c67824;
+}
+.letter {
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 110px;
+	text-align: center;
+	line-height: 110px;
+	-webkit-text-stroke: 2px #fff;
+	color: transparent;
+}
+.skills {
+	position: relative;
+	top: 20px;
+}
+.skills p {
+	text-align: center;
+}
+.skills .l {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 23px;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	color: #fff !important;
+}
+#banner {
+    position: relative;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.dnav {
+	margin: 100px auto 0;
+	text-align: center;
+	position: relative;
+}
+.dnav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+.dnav ul li {
+	margin: 10px 25px;
+}
+.dnav ul li a {
+	text-decoration: navajowhite;
+	font-size: 18px;
+	letter-spacing: 5px;
+	font-weight: 300;
+	color: #fff;
+	transition: 1s ease-in-out;
+	-webkit-text-stroke: 1px transparent;
+	position: relative;
+	z-index: 1;
+}
+.dnav ul li:hover a {
+	-webkit-text-stroke: 1px #fff;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 3px 3px #6a6a6a29;
+}
+.dnav ul li:first-child:hover a {
+	-webkit-text-stroke: 2px #20730f;
+}
+.dnav ul li:nth-child(2):hover a {
+	-webkit-text-stroke: 2px #c13425;
+}
+.dnav ul li:last-child:hover a {
+	-webkit-text-stroke: 2px #c67824;
+}
+.dnav ul li svg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: block;
+}
+.dnav ul li {
+	margin: 10px 10px;
+	position: relative;
+	padding: 10px 20px;
+}
+.dnav ul li svg rect {
+	fill: transparent !important;
+	stroke-width: 2px;
+	stroke: transparent;
+	stroke-dasharray: 595px;
+	stroke-dashoffset: 496px;
+	transition: 1s ease-in-out;
+}
+.dnav ul li:hover svg rect {
+	stroke-dasharray: 0;
+	stroke: #fff;
+}
+.sub {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 1;
+	display: none;
+	opacity: 1;
+	padding: 100px 0;
+	width: 100%;
+	height: 100%;
+}
+#about h3 {
+	letter-spacing: 4px;
+	font-size: 40px;
+	font-family: 'Montserrat';
+	font-weight: 500;
+	line-height: 55px;
+	color: #202020;
+	text-shadow: 2px 1px 3px #9f9b9b;
+	position: relative;
+}
+#about h2 {
+	text-transform: capitalize;
+	letter-spacing: 13px;
+	font-size: 65px;
+	line-height: 75px;
+	margin-bottom: 50px;
+	-webkit-text-stroke: 2px #202020;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 5px 3px #acacac;
+}
+.close-btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 40px 15px;
+	font-weight: 500;
+	text-decoration: navajowhite;
+	letter-spacing: 3px;
+	color: #202020;
+	font-size: 16px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+.close-btn svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+}
+.close-btn circle {
+	fill: transparent;
+	stroke-width: 1px;
+	stroke-dasharray: 255px;
+	stroke-dashoffset: 255px;
+	stroke: transparent;
+	transition: 0.5s ease-in-out;
+}
+.close-btn:hover circle {
+	stroke-dashoffset: 0;
+	stroke: #202020;
+}
+.sub #bg-line {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	left: 20px;
+	bottom: 20px;
+	width: 97%;
+	margin: 0 auto;
+	z-index: -1;
+	height: 95%;
+}
+.sub #bg-line rect {
+	fill: transparent !important;
+	stroke: #202020;
+	stroke-width: 3px;
+	stroke-dasharray: 8000px;
+	stroke-dashoffset: 8000px;
+}
+#about h3 .lett {
+	display: inline-block;
+}
+#about h3::before {
+	content: "";
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 120px;
+	background-color: #aedfaa;
+	position: absolute;
+}
+.stuff {
+	margin-top: 150px;
+	position: relative;
+}
+.stuff h4 {
+	text-transform: capitalize;
+	letter-spacing: 13px;
+	font-size: 75px;
+	line-height: 85px;
+	margin-bottom: 100px;
+	-webkit-text-stroke: 2px #202020;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 5px 3px #acacac;
+}
+.stuff h5 {
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	font-size: 30px;
+	line-height: 55px;
+	margin-bottom: 20px;
+	-webkit-text-stroke: 1px #202020;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 2px 2px #acacac;
+	text-decoration-line: ;
+}
+.stuff ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	width: 60%;
+}
+.stuff ul li {
+	font-size: 20px;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	letter-spacing: 2px;
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	padding: 25px 10px;
+	text-transform: uppercase;
+	color: #202020;
+}
+.stuff ul li .tech-letters {
+	display: inline-block;
+}
+.stuff.myBackground ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: baseline;
+}
+.stuff.myBackground ul li {
+	width: 100%;
+}
+.stuff.myBackground ul li h6 {
+	font-size: 23px;
+	line-height: 35px;
+}
+.stuff.myBackground ul li .year {
+	display: block;
+	text-transform: capitalize;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 32px;
+}
+.stuff.myBackground ul li h6 a {
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	font-size: 35px;
+	line-height: 48px;
+	margin-bottom: 10px;
+	-webkit-text-stroke: 1px #202020;
+	color: transparent !important;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 2px 2px #acacac;
+	text-decoration-line: none;
+}
+#contact .stuff, #works .stuff {
+	margin-top: 50px;
+}
+.stuff.myBackground ul li h5 a{
+	text-decoration-line: none;
+}
+.works-image {
+	position: fixed;
+	width: 60%;
+	height: 100vh;
+	background-color: transparent;
+	top: 0;
+	right: 0;
+	background-position: top left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	display: none;
+	border-radius: 10px;
+	z-index: -1;
+}
+* {
+	outline: none !important;
+	text-decoration: none !important;
+}
+@media screen and (max-width:1500px){
+
+}
+@media screen and (max-width:1366px){
+	
+}
+@media screen and (max-width:1280){
+	
+}
+@media screen and (max-width:1024px){
+	
+}
+@media screen and (max-width:991px){
+	.letter {
+		font-size: 90px;
+		line-height: 90px;
+	}
+	.l .letters {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.dnav {
+		margin: 80px auto 0;
+	}
+}
+@media screen and (max-width:767px){
+	
+}
+@media screen and (max-width:640px){
+	.letter {
+		font-size: 70px;
+		line-height: 70px;
+	}
+	.l .letters {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.dnav ul li {
+		padding: 10px 10px;
+	}
+	.dnav ul li a {
+		font-size: 14px;
+	}
+
+}
+@media screen and (max-width:480px){
+	.preload-txt {
+		height: 80px;
+		width: auto;
+	}	
+	.dnav ul {
+		flex-direction: column;
+	}
+	.dnav ul li {
+		margin: 5px 10px;
+	}
+}
+@media screen and (max-width:390px){
+	.preload-txt .txt {
+		font-size: 16px;
+	}	
+	.preload-txt {
+		height: 60px;
+		width: 90%;
+	}
+	.l .letters {
+		font-size: 10px;
+		line-height: 16px;
+	}
+	.letter {
+		font-size: 55px;
+		line-height: 60px;
+	}
+	.dnav {
+		margin: 70px auto 0;
+	}
+	
+	.dnav ul li a {
+		font-size: 12px;
+	}
+}
+
