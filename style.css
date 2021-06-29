@@ -264,17 +264,18 @@ a, span, label, strong, input, div, button{
 	text-shadow: 5px 3px #acacac;
 }
 .close-btn {
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 40px 15px;
-	font-weight: 500;
-	text-decoration: navajowhite;
-	letter-spacing: 3px;
-	color: #202020;
-	font-size: 16px;
-	margin-right: 20px;
-	margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 40px 15px;
+    font-weight: 500;
+    text-decoration: navajowhite;
+    letter-spacing: 3px;
+    color: #202020;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top: 20px;
+    z-index: 9999;
 }
 .close-btn svg {
 	position: absolute;
