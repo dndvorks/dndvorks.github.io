@@ -19,7 +19,8 @@
 					// alert("Form Data Submitted :)");
                     document.getElementById("p1").innerHTML = "<span class='success'>Good Job!<span>";
 						alert('SALE SUCCESSFULLY POSTED');
-                        $('#myForm').trigger("reset");
+                        //$('#myForm').trigger("reset");
+					document.getElementById('myInput').value = '';
 						$('button').css("pointer-events","unset");
 				},
 				error: function(){
@@ -109,7 +110,7 @@
 	<form id="myForm">
         <p id="p1"></p>
 		<label>Sale Info</label>
-		<input name="sales_made" />
+		<input name="sales_made" id="myInput"/>
 		<br/>
 		<label>agent</label>
 		<select name="agent">
