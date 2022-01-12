@@ -1,6 +1,6 @@
-$(window).ready(function(){
-window.location.href = 'https://dndvorks-7d0b90.ingress-baronn.easywp.com/';
-});
+// $(window).ready(function(){
+// window.location.href = 'https://dndvorks-7d0b90.ingress-baronn.easywp.com/';
+// });
 var textWrapper = document.querySelector('.txt-1');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
 var textWrapper = document.querySelector('.txt-2');
