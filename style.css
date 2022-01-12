@@ -436,6 +436,30 @@ a, span, label, strong, input, div, button{
 	outline: none !important;
 	text-decoration: none !important;
 }
+.meet p, .meet a {
+	font-size: 21px;
+	color: #202020;
+	line-height: 32px;
+	font-weight: 600;
+}
+.meet a {
+	text-decoration: underline !important;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.myBackground ul li a {
+	color: #202020;
+	font-size: 15px;
+}
+.myBackground ul li {
+	padding: 10px;
+}
+.myBackground ul li a i {
+	font-size: 20px;
+}
+.myBackground p {
+	font-size: 20px;
+}
 @media screen and (max-width:1500px){
 
 }
@@ -492,6 +516,65 @@ a, span, label, strong, input, div, button{
 	.dnav ul li {
 		margin: 5px 10px;
 	}
+    .stuff h4 {
+        font-size: 30px;
+        line-height: 55px;
+        margin-bottom: 0;
+        text-shadow: 5px 3px #acacac;
+    }
+    .sub #bg-line {
+        display: none;
+    }
+    .myBackground p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .stuff h5 {
+
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 17px;
+    }
+    #works .myBackground p {
+        font-size: 13px;
+        line-height: 26px;
+    }
+    #works .my-works {
+        margin-top: 50px;
+    }
+    .works-image {
+        display: none !important;
+    }
+    #about h2 {
+       
+        font-size: 35px;
+        line-height: 60px;
+     
+    }
+    #about h3 {
+
+        font-size: 20px;
+    
+        line-height: 40px;
+    }
+    #about .stuff ul {
+        width: 100%;
+    }
+    #about .stuff ul li {
+        width: 100%;
+        font-size: 15px;
+        padding: 0;
+        line-height: 28px;
+    }
+    #about .stuff h5 {
+        margin-top: 30px;
+    }
+    #about .stuff {
+        margin-top: 60px;
+    }
+    .meet p, .meet a {
+        font-size: 15px !important;
+    }
 }
 @media screen and (max-width:390px){
 	.preload-txt .txt {
