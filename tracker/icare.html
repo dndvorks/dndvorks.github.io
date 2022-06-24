@@ -12,7 +12,7 @@
 		function SubForm (){
 			$('button').css("pointer-events","none");
 			$.ajax({
-				url:"https://api.apispreadsheets.com/data/8RMmwlnJmu1KbPoS/",
+				url:"https://api.apispreadsheets.com/data/18055/",
 				type:"post",
 				data:$("#myForm").serializeArray(),
 				success: function(){
@@ -40,6 +40,7 @@
         }
         .errorx{
             color: #e2e2e2;
+            border: 1px solid red;
             border: 1px solid #e2e2e2;
             padding: 10px 20px;
         }
@@ -114,7 +115,7 @@
 		<input name="sales_made" id="myInput"/>
 		<br/>
 		<label>agent</label>
-		<select name="name_of_agent">
+		<select name="agent">
             <option value="ITV Lance">ITV Lance</option>
             <option value="ITV Ren">ITV Ren</option>
 			<option value="ITV Fretzel">ITV Fretzel</option>
@@ -128,10 +129,9 @@
         </select>
 		<br/>
 		<label>Campaign:</label>
-		<select name="disposition_of_sale">
+		<select name="disposition">
 			<option value="MED SUPP ">MED SUPP</option>
 			<option value="Loan APP">Loan APP</option>
-
 <div style="width:100%;
 height:0;padding-bottom:75%;
 position:relative;"><iframe src="https://giphy.com/embed/3xz2Bw12fe9iyG06v6"
@@ -139,11 +139,8 @@ width="100%"
 height="100%"
 style="position:absolute" frameBorder="0"
 class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/customer-service-help-desk-call-center-3xz2Bw12fe9iyG06v6">via GIPHY</a></p>
-
-
         </select>
 		<br/>
-
 	</form>
     <div class="btn-box">
         <button onclick='SubForm()'>Submit</button>
