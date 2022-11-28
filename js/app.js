@@ -112,13 +112,13 @@ function shadow(e) {
 }
 hero.addEventListener('mousemove', shadow) 
 
-// // Wrap every letter in a span
-// var textWrapper = document.querySelector('.l1');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
-// var textWrapper = document.querySelector('.l2');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
-// var textWrapper = document.querySelector('.l3');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.l1');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+var textWrapper = document.querySelector('.l2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+var textWrapper = document.querySelector('.l3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
 
 var bnr = anime.timeline({loop: true, autoplay:false});
   bnr.add({
