@@ -327,6 +327,7 @@ a, span, label, strong, input, div, button{
 	height: 120px;
 	background-color: #aedfaa;
 	position: absolute;
+	z-index: -1;
 }
 .stuff {
 	margin-top: 150px;
