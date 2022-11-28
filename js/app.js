@@ -3,7 +3,23 @@
 // });
 
 
-
+$(window).on('load', function () {
+  prog.play();
+  setTimeout(function(){ $('.preload-txt').fadeOut(500); }, 4500);
+  setTimeout(function(){ $('.preload').slideUp("swing");
+  bnr.play();
+}, 5000);
+setTimeout(function(){ 
+anime({
+targets:".particles-js-canvas-el",
+opacity:[0,1],
+easing: "easeOutExpo",
+duration:1000,
+loop:false
+});
+$('.js-canvas').fadeIn(500);
+}, 5500);
+});
   
 const hero = document.querySelector('#banner')  
 const text = hero.querySelector('h1')
@@ -32,63 +48,63 @@ function shadow(e) {
 }
 hero.addEventListener('mousemove', shadow) 
 
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.l1');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
-var textWrapper = document.querySelector('.l2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
-var textWrapper = document.querySelector('.l3');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+// // Wrap every letter in a span
+// var textWrapper = document.querySelector('.l1');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+// var textWrapper = document.querySelector('.l2');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
+// var textWrapper = document.querySelector('.l3');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
 
-var bnr = anime.timeline({loop: true, autoplay:false});
-  bnr.add({
-    targets: '.skills .l1 .letters',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i
-  },"-=600").add({
-    targets: '.skills .l1 .letters',
-    translateX: [0,-30],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i
-  })
-  .add({
-    targets: '.skills .l2 .letters',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i
-  },"-=600").add({
-    targets: '.skills .l2 .letters',
-    translateX: [0,-30],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i
-  })
-  .add({
-    targets: '.skills .l3 .letters',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i
-  },"-=600").add({
-    targets: '.skills .l3 .letters',
-    translateX: [0,-30],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i
-  });
+// var bnr = anime.timeline({loop: true, autoplay:false});
+//   bnr.add({
+//     targets: '.skills .l1 .letters',
+//     translateX: [40,0],
+//     translateZ: 0,
+//     opacity: [0,1],
+//     easing: "easeOutExpo",
+//     duration: 1200,
+//     delay: (el, i) => 500 + 30 * i
+//   },"-=600").add({
+//     targets: '.skills .l1 .letters',
+//     translateX: [0,-30],
+//     opacity: [1,0],
+//     easing: "easeInExpo",
+//     duration: 1100,
+//     delay: (el, i) => 100 + 30 * i
+//   })
+//   .add({
+//     targets: '.skills .l2 .letters',
+//     translateX: [40,0],
+//     translateZ: 0,
+//     opacity: [0,1],
+//     easing: "easeOutExpo",
+//     duration: 1200,
+//     delay: (el, i) => 500 + 30 * i
+//   },"-=600").add({
+//     targets: '.skills .l2 .letters',
+//     translateX: [0,-30],
+//     opacity: [1,0],
+//     easing: "easeInExpo",
+//     duration: 1100,
+//     delay: (el, i) => 100 + 30 * i
+//   })
+//   .add({
+//     targets: '.skills .l3 .letters',
+//     translateX: [40,0],
+//     translateZ: 0,
+//     opacity: [0,1],
+//     easing: "easeOutExpo",
+//     duration: 1200,
+//     delay: (el, i) => 500 + 30 * i
+//   },"-=600").add({
+//     targets: '.skills .l3 .letters',
+//     translateX: [0,-30],
+//     opacity: [1,0],
+//     easing: "easeInExpo",
+//     duration: 1100,
+//     delay: (el, i) => 100 + 30 * i
+//   });
 
   var morphing = anime({
     targets: 'svg path',
@@ -512,20 +528,3 @@ var prel = anime.timeline({loop: true})
     loop:false,
     autoplay:false
   });
-  $(window).on('load', function () {
-    prog.play();
-    setTimeout(function(){ $('.preload-txt').fadeOut(500); }, 4500);
-    setTimeout(function(){ $('.preload').slideUp("swing");
-    bnr.play();
-}, 5000);
-setTimeout(function(){ 
-anime({
-  targets:".particles-js-canvas-el",
-  opacity:[0,1],
-  easing: "easeOutExpo",
-  duration:1000,
-  loop:false
-});
-$('.js-canvas').fadeIn(500);
-}, 5500);
-});
