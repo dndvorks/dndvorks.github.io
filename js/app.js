@@ -3,23 +3,7 @@
 // });
 
 
-$(window).on('load', function () {
-    prog.play();
-    setTimeout(function(){ $('.preload-txt').fadeOut(500); }, 4500);
-    setTimeout(function(){ $('.preload').slideUp("swing");
-    bnr.play();
-}, 5000);
-setTimeout(function(){ 
-anime({
-  targets:".particles-js-canvas-el",
-  opacity:[0,1],
-  easing: "easeOutExpo",
-  duration:1000,
-  loop:false
-});
-$('.js-canvas').fadeIn(500);
-}, 5500);
-});
+
   
 const hero = document.querySelector('#banner')  
 const text = hero.querySelector('h1')
@@ -528,3 +512,20 @@ var prel = anime.timeline({loop: true})
     loop:false,
     autoplay:false
   });
+  $(window).on('load', function () {
+    prog.play();
+    setTimeout(function(){ $('.preload-txt').fadeOut(500); }, 4500);
+    setTimeout(function(){ $('.preload').slideUp("swing");
+    bnr.play();
+}, 5000);
+setTimeout(function(){ 
+anime({
+  targets:".particles-js-canvas-el",
+  opacity:[0,1],
+  easing: "easeOutExpo",
+  duration:1000,
+  loop:false
+});
+$('.js-canvas').fadeIn(500);
+}, 5500);
+});
