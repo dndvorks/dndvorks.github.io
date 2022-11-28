@@ -120,55 +120,55 @@ hero.addEventListener('mousemove', shadow)
 // var textWrapper = document.querySelector('.l3');
 // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letters'>$&</span>");
 
-// var bnr = anime.timeline({loop: true, autoplay:false});
-//   bnr.add({
-//     targets: '.skills .l1 .letters',
-//     translateX: [40,0],
-//     translateZ: 0,
-//     opacity: [0,1],
-//     easing: "easeOutExpo",
-//     duration: 1200,
-//     delay: (el, i) => 500 + 30 * i
-//   },"-=600").add({
-//     targets: '.skills .l1 .letters',
-//     translateX: [0,-30],
-//     opacity: [1,0],
-//     easing: "easeInExpo",
-//     duration: 1100,
-//     delay: (el, i) => 100 + 30 * i
-//   })
-//   .add({
-//     targets: '.skills .l2 .letters',
-//     translateX: [40,0],
-//     translateZ: 0,
-//     opacity: [0,1],
-//     easing: "easeOutExpo",
-//     duration: 1200,
-//     delay: (el, i) => 500 + 30 * i
-//   },"-=600").add({
-//     targets: '.skills .l2 .letters',
-//     translateX: [0,-30],
-//     opacity: [1,0],
-//     easing: "easeInExpo",
-//     duration: 1100,
-//     delay: (el, i) => 100 + 30 * i
-//   })
-//   .add({
-//     targets: '.skills .l3 .letters',
-//     translateX: [40,0],
-//     translateZ: 0,
-//     opacity: [0,1],
-//     easing: "easeOutExpo",
-//     duration: 1200,
-//     delay: (el, i) => 500 + 30 * i
-//   },"-=600").add({
-//     targets: '.skills .l3 .letters',
-//     translateX: [0,-30],
-//     opacity: [1,0],
-//     easing: "easeInExpo",
-//     duration: 1100,
-//     delay: (el, i) => 100 + 30 * i
-//   });
+var bnr = anime.timeline({loop: true, autoplay:false});
+  bnr.add({
+    targets: '.skills .l1 .letters',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  },"-=600").add({
+    targets: '.skills .l1 .letters',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  })
+  .add({
+    targets: '.skills .l2 .letters',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  },"-=600").add({
+    targets: '.skills .l2 .letters',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  })
+  .add({
+    targets: '.skills .l3 .letters',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  },"-=600").add({
+    targets: '.skills .l3 .letters',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });
 
   var morphing = anime({
     targets: 'svg path',
@@ -200,130 +200,130 @@ hero.addEventListener('mousemove', shadow)
     $(".sub").slideUp(300);
   });
 
-  var textWrapper1 = document.querySelector('.abt-cont');
-textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='lett'>$&</span>");
-var prelx = anime.timeline({loop: false,autoplay:false})
+//   var textWrapper1 = document.querySelector('.abt-cont');
+// textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='lett'>$&</span>");
+// var prelx = anime.timeline({loop: false,autoplay:false})
 
-  .add({
-    targets:'#about h2',
-    translateX:[-50, 0],
-    opacity:[0,1],
-    easing: "easeOutExpo",
-    duration:1000
-  })
-  .add({
-    targets: '.abt-cont .lett',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 300 + 30 * i
-  },"-=500");
+//   .add({
+//     targets:'#about h2',
+//     translateX:[-50, 0],
+//     opacity:[0,1],
+//     easing: "easeOutExpo",
+//     duration:1000
+//   })
+//   .add({
+//     targets: '.abt-cont .lett',
+//     translateY: [100,0],
+//     translateZ: 0,
+//     opacity: [0,1],
+//     easing: "easeOutExpo",
+//     duration: 1000,
+//     delay: (el, i) => 300 + 30 * i
+//   },"-=500");
 
 
-  // Wrap every letter in a span
+//   // Wrap every letter in a span
 
-    var textWrapper2 = document.querySelector(".tech1");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
-var textWrapper2 = document.querySelector(".tech2");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
-var textWrapper2 = document.querySelector(".tech3");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
-var textWrapper2 = document.querySelector(".tech4");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
-var textWrapper2 = document.querySelector(".tech5");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
-var textWrapper2 = document.querySelector(".tech6");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
-var textWrapper2 = document.querySelector(".tech7");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+//     var textWrapper2 = document.querySelector(".tech1");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+// var textWrapper2 = document.querySelector(".tech2");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+// var textWrapper2 = document.querySelector(".tech3");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+// var textWrapper2 = document.querySelector(".tech4");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+// var textWrapper2 = document.querySelector(".tech5");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+// var textWrapper2 = document.querySelector(".tech6");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
+// var textWrapper2 = document.querySelector(".tech7");
+// textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='tech-letters'>$&</span>");
 
-var tEch = anime.timeline({loop: false,autoplay:false})
-.add({
-  targets:'.stuff h4',
-  translateX:[-50, 0],
-  opacity:[0,1],
-  easing: "easeOutExpo",
-  duration:1000
-})
-  .add({
-    targets: '.tech1 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  })
-  .add({
-    targets: '.tech2 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  })
-  .add({
-    targets: '.tech3 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  })
-  .add({
-    targets: '.tech4 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  })
-  .add({
-    targets: '.tech5 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  })
-  .add({
-    targets: '.tech6 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  })
-  .add({
-    targets: '.tech7 .tech-letters',
-    opacity:[0,1],
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 300,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  });
+// var tEch = anime.timeline({loop: false,autoplay:false})
+// .add({
+//   targets:'.stuff h4',
+//   translateX:[-50, 0],
+//   opacity:[0,1],
+//   easing: "easeOutExpo",
+//   duration:1000
+// })
+//   .add({
+//     targets: '.tech1 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   })
+//   .add({
+//     targets: '.tech2 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   })
+//   .add({
+//     targets: '.tech3 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   })
+//   .add({
+//     targets: '.tech4 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   })
+//   .add({
+//     targets: '.tech5 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   })
+//   .add({
+//     targets: '.tech6 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   })
+//   .add({
+//     targets: '.tech7 .tech-letters',
+//     opacity:[0,1],
+//     translateY: ["1.1em", 0],
+//     translateX: ["0.55em", 0],
+//     translateZ: 0,
+//     rotateZ: [180, 0],
+//     duration: 300,
+//     easing: "easeOutExpo",
+//     delay: (el, i) => 50 * i
+//   });
 
   const canvas = document.querySelector('.js-canvas')
   const ctx = canvas.getContext('2d')
