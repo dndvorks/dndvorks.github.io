@@ -1,70 +1,7 @@
 // $(window).ready(function(){
 // window.location.href = 'https://dndvorks-7d0b90.ingress-baronn.easywp.com/';
 // });
-var textWrapper = document.querySelector('.txt-1');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
-var textWrapper = document.querySelector('.txt-2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
-var textWrapper = document.querySelector('.txt-3');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
-var prel = anime.timeline({loop: true})
-  .add({
-    targets: '.txt-1 .txt1',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 300,
-    delay: (el, i) => 300 + 30 * i
-  }).add({
-    targets: '.txt-1 .txt1',
-    translateY: [0,-100],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 300,
-    delay: (el, i) => 100 + 30 * i
-  })
-  .add({
-    targets: '.txt-2 .txt1',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 300,
-    delay: (el, i) => 300 + 30 * i
-  }).add({
-    targets: '.txt-2 .txt1',
-    translateY: [0,-100],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 300,
-    delay: (el, i) => 100 + 30 * i
-  })
-  .add({
-    targets: '.txt-3 .txt1',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 300,
-    delay: (el, i) => 300 + 30 * i
-  }).add({
-    targets: '.txt-3 .txt1',
-    translateY: [0,-100],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 300,
-    delay: (el, i) => 100 + 30 * i
-  });
 
-  var prog = anime({
-    targets: ".preload-txt svg rect",
-    easing: "easeInExpo",
-    strokeDashoffset:[1200,0],
-    duration: 4500,
-    loop:false,
-    autoplay:false
-  });
 
 $(window).on('load', function () {
     prog.play();
@@ -526,4 +463,68 @@ $(".my-works li a").each(function(){
       }
     },
     "retina_detect": true
+  });
+var textWrapper = document.querySelector('.txt-1');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
+var textWrapper = document.querySelector('.txt-2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
+var textWrapper = document.querySelector('.txt-3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='txt1'>$&</span>");
+var prel = anime.timeline({loop: true})
+  .add({
+    targets: '.txt-1 .txt1',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 300,
+    delay: (el, i) => 300 + 30 * i
+  }).add({
+    targets: '.txt-1 .txt1',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 300,
+    delay: (el, i) => 100 + 30 * i
+  })
+  .add({
+    targets: '.txt-2 .txt1',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 300,
+    delay: (el, i) => 300 + 30 * i
+  }).add({
+    targets: '.txt-2 .txt1',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 300,
+    delay: (el, i) => 100 + 30 * i
+  })
+  .add({
+    targets: '.txt-3 .txt1',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 300,
+    delay: (el, i) => 300 + 30 * i
+  }).add({
+    targets: '.txt-3 .txt1',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 300,
+    delay: (el, i) => 100 + 30 * i
+  });
+
+  var prog = anime({
+    targets: ".preload-txt svg rect",
+    easing: "easeInExpo",
+    strokeDashoffset:[1200,0],
+    duration: 4500,
+    loop:false,
+    autoplay:false
   });
