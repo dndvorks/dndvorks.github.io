@@ -28,22 +28,41 @@ const audio = document.getElementById('myAudio');
     });
 
     // KEEPING YOUR ORIGINAL VIDEO SCROLL CODE:
-    var frameNumber = 0, // start video at frame 0
-        playbackConst = 500, // lower = faster playback
-        setHeight = document.getElementById("set-height"), 
-        vid = document.getElementById('v0'); 
+    var playbackConst = 500, // Adjust scroll speed (lower = faster)
+      setHeight = document.getElementById("set-height"), 
+      vid = document.getElementById("v0"),
+      ticking = false;
 
-    // dynamically set the page height according to video length
-    vid.addEventListener('loadedmetadata', function() {
-      setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-    });
+  // Set page height based on video duration
+  vid.addEventListener("loadedmetadata", function () {
+    setHeight.style.height = Math.floor(vid.duration * playbackConst) + "px";
+  });
 
-    // Use requestAnimationFrame for smooth playback
-    function scrollPlay(){  
-      var frameNumber = window.pageYOffset / playbackConst;
-      vid.currentTime = frameNumber;
-      window.requestAnimationFrame(scrollPlay);
+  function updateVideo() {
+    ticking = false;
+
+    // Calculate scroll-based time
+    var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var frameNumber = scrollPos / playbackConst;
+
+    // Clamp currentTime between 0 and vid.duration
+    var newTime = Math.min(Math.max(0, frameNumber), vid.duration);
+
+    // Only update if significantly different (prevents jitter)
+    if (Math.abs(vid.currentTime - newTime) > 0.01) {
+      vid.currentTime = newTime;
     }
 
-    // Ensure the video scroll plays by calling requestAnimationFrame
-    window.requestAnimationFrame(scrollPlay);
+    window.requestAnimationFrame(updateVideo);
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateVideo);
+      ticking = true;
+    }
+  }
+
+  // Attach scroll listener
+  window.addEventListener("scroll", onScroll);
+  window.requestAnimationFrame(updateVideo); // Kick off loop
