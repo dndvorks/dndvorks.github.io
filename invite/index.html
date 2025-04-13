@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eunice and Dave</title>
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body>
@@ -16,18 +15,30 @@
     </div>
     <div id="set-height"></div>
     <p id="time"></p>
-   <video id="v0" tabindex="0" autobuffer="autobuffer" preload="auto" disablepictureinpicture playsinline muted>
-    <source src="https://irs-ein-taxid-us.com/wp-content/uploads/2025/04/slow_vid.webm" type='video/webm; codecs="vp8, vorbis"'>
-    <source src="https://irs-ein-taxid-us.com/wp-content/uploads/2025/04/slow_vid_minified.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'">
-    Your browser does not support the video tag.
-</video>
 
+    <!-- Video Section -->
+    <video id="v0"
+        tabindex="0"
+        preload="auto"
+        autoplay
+        muted
+        playsinline
+        disablepictureinpicture
+        style="width: 100%; display: block;">
+        <source src="https://irs-ein-taxid-us.com/wp-content/uploads/2025/04/slow_vid.webm" type='video/webm; codecs="vp8, vorbis"'>
+        <source src="https://irs-ein-taxid-us.com/wp-content/uploads/2025/04/slow_vid_minified.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio Section -->
     <button id="playBtn">Start Music</button>
-    <audio id="myAudio" loop autoplay controls>
+    <audio id="myAudio" loop autoplay style="display: none;">
         <source src="https://irs-ein-taxid-us.com/wp-content/uploads/2025/04/anyone.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
     <script src="./js/scripts.js"></script>
+
 </body>
 
 </html>
