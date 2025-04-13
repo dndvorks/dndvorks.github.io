@@ -1,0 +1,98 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    overflow: hidden; /* Disable scrolling initially */
+  }
+  
+  /* Button Wall */
+  #buttonWall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  #viewBtn {
+    padding: 1em 2em;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #2f2f2f;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #viewBtn:hover {
+    background-color: #ccc;
+    transform: scale(1.05);
+  }
+  
+  /* Fade-out effect */
+  #buttonWall.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Scroll-based Video Elements */
+  #set-height {
+    display: block;
+    width: 100%;
+  }
+  
+  #v0 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    max-height: 100%;
+    object-fit: cover;
+}
+  
+  /* Responsive typography */
+  p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 1rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #viewBtn {
+      font-size: 1.2rem;
+      padding: 0.8em 1.5em;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #viewBtn {
+      font-size: 1rem;
+      padding: 0.7em 1.2em;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+  
