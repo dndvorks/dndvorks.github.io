@@ -1,3 +1,4 @@
+/* Basic Styling */
 html, body {
     margin: 0;
     padding: 0;
@@ -42,7 +43,7 @@ html, body {
     transform: scale(1.05);
   }
   
-  /* Fade-out effect */
+  /* Button Wall Fade-out effect */
   #buttonWall.hidden {
     opacity: 0;
     pointer-events: none;
@@ -52,6 +53,7 @@ html, body {
   #set-height {
     display: block;
     width: 100%;
+    /* Dynamic height will be set via JS to match video duration */
   }
   
   #v0 {
@@ -62,8 +64,9 @@ html, body {
     height: 100%;
     z-index: 1;
     max-height: 100%;
-    object-fit: cover;
-}
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    pointer-events: none; /* Prevents interaction with the video while scrolling */
+  }
   
   /* Responsive typography */
   p {
@@ -73,7 +76,7 @@ html, body {
     margin: 1rem;
   }
   
-  /* Responsive styles */
+  /* Responsive Styles */
   @media (max-width: 768px) {
     #viewBtn {
       font-size: 1.2rem;
