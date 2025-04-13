@@ -28,41 +28,46 @@ const audio = document.getElementById('myAudio');
     });
 
     // KEEPING YOUR ORIGINAL VIDEO SCROLL CODE:
-    var playbackConst = 500, // Adjust scroll speed (lower = faster)
-      setHeight = document.getElementById("set-height"), 
-      vid = document.getElementById("v0"),
-      ticking = false;
-
-  // Set page height based on video duration
-  vid.addEventListener("loadedmetadata", function () {
-    setHeight.style.height = Math.floor(vid.duration * playbackConst) + "px";
-  });
-
-  function updateVideo() {
-    ticking = false;
-
-    // Calculate scroll-based time
-    var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    var frameNumber = scrollPos / playbackConst;
-
-    // Clamp currentTime between 0 and vid.duration
-    var newTime = Math.min(Math.max(0, frameNumber), vid.duration);
-
-    // Only update if significantly different (prevents jitter)
-    if (Math.abs(vid.currentTime - newTime) > 0.01) {
-      vid.currentTime = newTime;
+ const playbackConst = 500; // Adjust this to control scroll speed
+    const setHeight = document.getElementById("set-height");
+    const vid = document.getElementById("v0");
+  
+    // Set the height based on video duration
+    function setPageHeight() {
+      const duration = Math.floor(vid.duration);
+      setHeight.style.height = duration * playbackConst + "px";
     }
-
-    window.requestAnimationFrame(updateVideo);
-  }
-
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(updateVideo);
-      ticking = true;
+  
+    // Frame-syncing function
+    function scrollPlay() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const frameNumber = scrollTop / playbackConst;
+      const clampedTime = Math.min(Math.max(0, frameNumber), vid.duration);
+  
+      if (Math.abs(vid.currentTime - clampedTime) > 0.01) {
+        vid.currentTime = clampedTime;
+      }
+  
+      requestAnimationFrame(scrollPlay);
     }
-  }
-
-  // Attach scroll listener
-  window.addEventListener("scroll", onScroll);
-  window.requestAnimationFrame(updateVideo); // Kick off loop
+  
+    // Start once the video is ready and fully buffered
+    function initWhenVideoIsReady() {
+      if (vid.readyState >= 4) { // HAVE_ENOUGH_DATA
+        setPageHeight();
+        requestAnimationFrame(scrollPlay);
+      } else {
+        // Wait until it's fully buffered
+        vid.addEventListener('canplaythrough', () => {
+          setPageHeight();
+          requestAnimationFrame(scrollPlay);
+        }, { once: true });
+      }
+    }
+  
+    // Ensure metadata is loaded first
+    if (vid.readyState >= 1) {
+      initWhenVideoIsReady();
+    } else {
+      vid.addEventListener('loadeddata', initWhenVideoIsReady, { once: true });
+    }
